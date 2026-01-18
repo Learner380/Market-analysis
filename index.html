@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Nifty 50 Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="background-gradient"></div>
+        
+        <div class="header">
+            <h1>📈 Live Nifty 50</h1>
+            <p class="subtitle">Real-time Market Updates</p>
+        </div>
+
+        <div class="main-card">
+            <div class="price-section">
+                <div class="price-wrapper">
+                    <span class="currency">₹</span>
+                    <span class="price" id="price">--</span>
+                </div>
+                
+                <div class="change-section">
+                    <span class="change-value" id="changeValue">--</span>
+                    <span class="change-percent" id="changePercent">--</span>
+                </div>
+            </div>
+
+            <div class="market-status">
+                <div class="status-indicator" id="statusIndicator"></div>
+                <span class="status-text" id="statusText">Checking Market Status...</span>
+            </div>
+
+            <div class="details-grid">
+                <div class="detail-card">
+                    <span class="detail-label">High</span>
+                    <span class="detail-value" id="high">--</span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-label">Low</span>
+                    <span class="detail-value" id="low">--</span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-label">Open</span>
+                    <span class="detail-value" id="open">--</span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-label">Close</span>
+                    <span class="detail-value" id="close">--</span>
+                </div>
+            </div>
+
+            <div class="chart-section">
+                <canvas id="priceChart"></canvas>
+            </div>
+
+            <div class="info-section">
+                <p class="last-updated">Last Updated: <span id="lastUpdated">--</span></p>
+                <div class="refresh-button-wrapper">
+                    <button class="refresh-button" id="refreshBtn">🔄 Refresh Now</button>
+                </div>
+                <p class="market-hours">Market Hours: 09:15 AM - 03:30 PM (IST)</p>
+            </div>
+        </div>
+
+        <div class="floating-indicator">
+            <div class="pulse"></div>
+            <span>Live</span>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
